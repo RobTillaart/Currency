@@ -112,12 +112,12 @@ char * dollar(int32_t value)    { return currency(value, 2,  '.',  ',',  '$'); }
 char * euro(int32_t value)      { return currency(value, 2,  ' ',  '.',  'E'); }
 char * roebel(int32_t value)    { return currency(value, 2,  ' ',  '.',  'P'); }
 char * yen(int32_t value)       { return currency(value, 2,  '.',  ',',  'Y'); }
-char * yuan(int32_t value)      { return currency(value, 2,  '.',  ',',  'R'); }  // TODO verify
+char * yuan(int32_t value)      { return currency(value, 2,  '.',  ',',  'R'); }
 
 char * bitcoin64(int64_t value) { return currency64(value, 6,  '.',  ',',  'B'); }  
 char * dollar64(int64_t value)  { return currency64(value, 2,  '.',  ',',  '$'); }
 char * euro64(int64_t value)    { return currency64(value, 2,  ' ',  '.',  'E'); }
-char * roebel64(int64_t value)    { return currency64(value, 2,  ' ',  '.',  'P'); }
+char * roebel64(int64_t value)  { return currency64(value, 2,  ' ',  '.',  'P'); }
 char * yen64(int64_t value)     { return currency64(value, 2,  '.',  ',',  'Y'); }
 char * yuan64(int64_t value)    { return currency64(value, 2,  '.',  ',',  'R'); }
 
