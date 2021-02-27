@@ -154,8 +154,8 @@ unittest(wrappersdouble)
   fprintf(stderr, "%s\n", bitcoinf(9999.99) );
   fprintf(stderr, "%s\n", bitcoinf(-9999.99) );
 
-  assertEqual(0, strcmp("B 0.010000", bitcoinf(9999.99) ) );
-  assertEqual(0, strcmp("B-0.010000", bitcoinf(-9999.99) ) );
+  assertEqual(0, strcmp("B 9,999.990000", bitcoinf(9999.99) ) );
+  assertEqual(0, strcmp("B-9,999.990000", bitcoinf(-9999.99) ) );
 }
 
 
