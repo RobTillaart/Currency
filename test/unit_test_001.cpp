@@ -151,6 +151,9 @@ unittest(wrappersdouble)
   assertEqual(0, strcmp("E 9.999,99", eurof(9999.99) ) );
   assertEqual(0, strcmp("E-9.999,99", eurof(-9999.99) ) );
   // rounding !!
+  fprintf(stderr, "%s\n", bitcoinf(9999.99) );
+  fprintf(stderr, "%s\n", bitcoinf(-9999.99) );
+
   assertEqual(0, strcmp("B 0.010000", bitcoinf(9999.99) ) );
   assertEqual(0, strcmp("B-0.010000", bitcoinf(-9999.99) ) );
 }
