@@ -1,7 +1,7 @@
 
 [![Arduino CI](https://github.com/RobTillaart/currency/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/currency/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/RobTillaart/printHelpers.svg?maxAge=3600)](https://github.com/RobTillaart/currency/releases)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/currency.svg?maxAge=3600)](https://github.com/RobTillaart/currency/releases)
 
 
 
