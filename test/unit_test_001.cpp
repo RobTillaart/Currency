@@ -98,7 +98,7 @@ unittest(currency32)
   fprintf(stderr, "%s\n", currency(-1000000000, 2, '.', ',', '$') );
   fprintf(stderr, "\n");
 
-  assertEqual(0, strcmp("$ 0,00",         currency(0, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$ 0.00",         currency(0, 2, '.', ',', '$') ) );
   assertEqual(0, strcmp("$ 9,999,999.99", currency(999999999, 2, '.', ',', '$') ) );
   assertEqual(0, strcmp("$-9,999,999.99", currency(-999999999, 2, '.', ',', '$') ) );
 }
@@ -150,8 +150,8 @@ unittest(wrappersdouble)
   assertEqual(0, strcmp("$-9,999.99", dollarf(-9999.99) ) );
   assertEqual(0, strcmp("E 9.999,99", eurof(9999.99) ) );
   assertEqual(0, strcmp("E-9.999,99", eurof(-9999.99) ) );
-  assertEqual(0, strcmp("B 0.999999", bitcoinf(9999.99) ) );
-  assertEqual(0, strcmp("B-0.999999", bitcoinf(-9999.99) ) );
+  assertEqual(0, strcmp("B 0.009999", bitcoinf(9999.99) ) );
+  assertEqual(0, strcmp("B-0.009999", bitcoinf(-9999.99) ) );
 }
 
 
