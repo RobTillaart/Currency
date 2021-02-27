@@ -109,22 +109,22 @@ char * currency64(int64_t value, int decimals, char dsep, char tsep, char sym)
 //
 char * bitcoin(int32_t value)   { return currency(value, 6,  '.',  ',',  'B'); }  
 char * dollar(int32_t value)    { return currency(value, 2,  '.',  ',',  '$'); }
-char * euro(int32_t value)      { return currency(value, 2,  ' ',  '.',  'E'); }
-char * roebel(int32_t value)    { return currency(value, 2,  ' ',  '.',  'P'); }
+char * euro(int32_t value)      { return currency(value, 2,  ',',  '.',  'E'); }
+char * roebel(int32_t value)    { return currency(value, 2,  ',',  '.',  'P'); }
 char * yen(int32_t value)       { return currency(value, 2,  '.',  ',',  'Y'); }
 char * yuan(int32_t value)      { return currency(value, 2,  '.',  ',',  'R'); }
 
 char * bitcoin64(int64_t value) { return currency64(value, 6,  '.',  ',',  'B'); }  
 char * dollar64(int64_t value)  { return currency64(value, 2,  '.',  ',',  '$'); }
-char * euro64(int64_t value)    { return currency64(value, 2,  ' ',  '.',  'E'); }
-char * roebel64(int64_t value)  { return currency64(value, 2,  ' ',  '.',  'P'); }
+char * euro64(int64_t value)    { return currency64(value, 2,  ',',  '.',  'E'); }
+char * roebel64(int64_t value)  { return currency64(value, 2,  ',',  '.',  'P'); }
 char * yen64(int64_t value)     { return currency64(value, 2,  '.',  ',',  'Y'); }
 char * yuan64(int64_t value)    { return currency64(value, 2,  '.',  ',',  'R'); }
 
 char * bitcoinf(double value)   { return currency64(round(value * 1000000), 6,  '.',  ',',  'B'); }  
 char * dollarf(double value)    { return currency64(round(value * 100), 2,  '.',  ',',  '$'); }
-char * eurof(double value)      { return currency64(round(value * 100), 2,  ' ',  '.',  'E'); }
-char * roebelf(double value)    { return currency64(round(value * 100), 2,  ' ',  '.',  'P'); }
+char * eurof(double value)      { return currency64(round(value * 100), 2,  ',',  '.',  'E'); }
+char * roebelf(double value)    { return currency64(round(value * 100), 2,  ',',  '.',  'P'); }
 char * yenf(double value)       { return currency64(round(value * 100), 2,  '.',  ',',  'Y'); }
 char * yuanf(double value)      { return currency64(round(value * 100), 2,  '.',  ',',  'R'); }
 
