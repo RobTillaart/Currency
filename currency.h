@@ -6,23 +6,26 @@
 // VERSION: 0.1.0
 // PURPOSE: Currency library for Arduino
 //     URL: https://github.com/RobTillaart/Currency
-//
+
+//  HISTORY
+//  0.1.0   2021-02-27  initial version
 
 
 #include "Arduino.h"
 
 
-////////////////////////////////////////////////////////////
-//
-// CURRENCY NOTATIION
-//
+#define CURRENCY_VERSION        (F("0.1.0"))
 
-// TODO optimize this 99% same code currency64  
+
+// TODO 
+// optimize this 99% same code currency - currency64  
 // print to string and "merge" with formatters?
-// TODO float/double
-// TODO flag for 
+//
+// ALT-0165 = ¥
+// ALT-0128 = €
+// U+20BF   = Bitcoin
 
-// no floats/double
+
 char * currency(int32_t value, int decimals, char dsep, char tsep, char sym)
 {
   static char tmp[16];
@@ -62,9 +65,6 @@ char * currency(int32_t value, int decimals, char dsep, char tsep, char sym)
 }
 
 
-// TODO optimize this 99% same code currency64  
-// print to string and "merge" with formatters?
-// TODO float/double
 char * currency64(int64_t value, int decimals, char dsep, char tsep, char sym)
 {
   static char tmp[32];
@@ -103,14 +103,10 @@ char * currency64(int64_t value, int decimals, char dsep, char tsep, char sym)
   return tmp;
 }
 
-/*
-TODO 
 
-ALT-0165 = ¥
-ALT-0128 = €
-U+20BF   = Bitcoin 
-*/
-
+//
+//  DERIVED FUNCTIONS
+//
 char * bitcoin(int32_t value)   { return currency(value, 6,  '.',  ',',  'B'); }  
 char * dollar(int32_t value)    { return currency(value, 2,  '.',  ',',  '$'); }
 char * euro(int32_t value)      { return currency(value, 2,  ' ',  '.',  'E'); }
