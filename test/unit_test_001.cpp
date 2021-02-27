@@ -49,58 +49,58 @@ unittest(currency32)
 {
   fprintf(stderr, "VERSION: %s\n", CURRENCY_VERSION);
 
-  fprintf(stderr, currency(10000000, 0, '.', ',', '$') );
-  fprintf(stderr, currency(10000000, 1, '.', ',', 'E') );
-  fprintf(stderr, currency(10000000, 2, '.', ',', 'Y') );
-  fprintf(stderr, currency(10000000, 3, '.', ',', '$') );
-  fprintf(stderr, currency(10000000, 4, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(10000000, 0, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(10000000, 1, '.', ',', 'E') );
+  fprintf(stderr, "%s\n", currency(10000000, 2, '.', ',', 'Y') );
+  fprintf(stderr, "%s\n", currency(10000000, 3, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(10000000, 4, '.', ',', '$') );
   fprintf(stderr, "\n");
 
-  fprintf(stderr, currency(0, 2, '.', ',', '$') );
-  fprintf(stderr, currency(9, 2, '.', ',', '$') );
-  fprintf(stderr, currency(10, 2, '.', ',', '$') );
-  fprintf(stderr, currency(99, 2, '.', ',', '$') );
-  fprintf(stderr, currency(100, 2, '.', ',', '$') );
-  fprintf(stderr, currency(999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(1000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(9999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(10000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(99999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(100000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(1000000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(9999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(10000000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(99999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(100000000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(999999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(1000000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(0, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(9, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(10, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(99, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(100, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(1000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(9999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(10000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(99999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(100000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(1000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(9999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(10000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(99999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(100000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(999999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(1000000000, 2, '.', ',', '$') );
   fprintf(stderr, "\n");
 
-  fprintf(stderr, currency(-0, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-9, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-10, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-99, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-100, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-1000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-9999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-10000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-99999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-100000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-1000000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-9999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-10000000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-99999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-100000000, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-999999999, 2, '.', ',', '$') );
-  fprintf(stderr, currency(-1000000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-0, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-9, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-10, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-99, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-100, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-1000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-9999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-10000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-99999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-100000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-1000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-9999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-10000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-99999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-100000000, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-999999999, 2, '.', ',', '$') );
+  fprintf(stderr, "%s\n", currency(-1000000000, 2, '.', ',', '$') );
   fprintf(stderr, "\n");
 
-  assertEqual(0, strcmp("$ 0,00", currency(0, 2, '.', ',', '$') ) );
-  assertEqual(0, strcmp("$ 9.999.999,99", currency(999999999, 2, '.', ',', '$') ) );
-  assertEqual(0, strcmp("$-9.999.999,99", currency(-999999999, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$ 0.00",         currency(0, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$ 9,999,999.99", currency(999999999, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$-9,999,999.99", currency(-999999999, 2, '.', ',', '$') ) );
 }
 
 
@@ -108,9 +108,9 @@ unittest(currency64)
 {
   fprintf(stderr, "VERSION: %s\n", CURRENCY_VERSION);
 
-  assertEqual(0, strcmp("$ 0,00", currency64(0, 2, '.', ',', '$') ) );
-  assertEqual(0, strcmp("$ 9.999.999,99", currency64(999999999, 2, '.', ',', '$') ) );
-  assertEqual(0, strcmp("$-9.999.999,99", currency64(-999999999, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$ 0.00",         currency64(0, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$ 9,999,999.99", currency64(999999999, 2, '.', ',', '$') ) );
+  assertEqual(0, strcmp("$-9,999,999.99", currency64(-999999999, 2, '.', ',', '$') ) );
 }
 
 
@@ -118,13 +118,13 @@ unittest(wrappers32)
 {
   fprintf(stderr, "VERSION: %s\n", CURRENCY_VERSION);
 
-  assertEqual(0, strcmp("$ 9.999.999,99", dollar(0) ) );
-  assertEqual(0, strcmp("$ 9.999.999,99", dollar(999999999) ) );
-  assertEqual(0, strcmp("$-9.999.999,99", dollar(-999999999) ) );
+  assertEqual(0, strcmp("$ 0.00",         dollar(0) ) );
+  assertEqual(0, strcmp("$ 9,999,999.99", dollar(999999999) ) );
+  assertEqual(0, strcmp("$-9,999,999.99", dollar(-999999999) ) );
   assertEqual(0, strcmp("E 9.999.999,99", euro(999999999) ) );
   assertEqual(0, strcmp("E-9.999.999,99", euro(-999999999) ) );
-  assertEqual(0, strcmp("B 999,999999", bitcoin(999999999) ) );
-  assertEqual(0, strcmp("B-999,999999", bitcoin(-999999999) ) );
+  assertEqual(0, strcmp("B 999.999999",   bitcoin(999999999) ) );
+  assertEqual(0, strcmp("B-999.999999",   bitcoin(-999999999) ) );
 }
 
 
@@ -132,24 +132,30 @@ unittest(wrappers64)
 {
   fprintf(stderr, "VERSION: %s\n", CURRENCY_VERSION);
 
-  assertEqual(0, strcmp("$ 9.999.999,99", dollar64(999999999) ) );
-  assertEqual(0, strcmp("$-9.999.999,99", dollar64(-999999999) ) );
+  assertEqual(0, strcmp("$ 0.00",         dollar64(0) ) );
+  assertEqual(0, strcmp("$ 9,999,999.99", dollar64(999999999) ) );
+  assertEqual(0, strcmp("$-9,999,999.99", dollar64(-999999999) ) );
   assertEqual(0, strcmp("E 9.999.999,99", euro64(999999999) ) );
   assertEqual(0, strcmp("E-9.999.999,99", euro64(-999999999) ) );
-  assertEqual(0, strcmp("B 999,999999", bitcoin64(999999999) ) );
-  assertEqual(0, strcmp("B-999,999999", bitcoin64(-999999999) ) );
+  assertEqual(0, strcmp("B 999.999999",   bitcoin64(999999999) ) );
+  assertEqual(0, strcmp("B-999.999999",   bitcoin64(-999999999) ) );
 }
 
 unittest(wrappersdouble)
 {
   fprintf(stderr, "VERSION: %s\n", CURRENCY_VERSION);
 
-  assertEqual(0, strcmp("$ 9.999,99", dollarf(9999.99) ) );
-  assertEqual(0, strcmp("$-9.999,99", dollarf(-9999.99) ) );
+  assertEqual(0, strcmp("$ 0.00",     dollarf(0) ) );
+  assertEqual(0, strcmp("$ 9,999.99", dollarf(9999.99) ) );
+  assertEqual(0, strcmp("$-9,999.99", dollarf(-9999.99) ) );
   assertEqual(0, strcmp("E 9.999,99", eurof(9999.99) ) );
   assertEqual(0, strcmp("E-9.999,99", eurof(-9999.99) ) );
-  assertEqual(0, strcmp("B 0.999999", bitcoinf(9999.99) ) );
-  assertEqual(0, strcmp("B-0.999999", bitcoinf(-9999.99) ) );
+  // rounding !!
+  fprintf(stderr, "%s\n", bitcoinf(9999.99) );
+  fprintf(stderr, "%s\n", bitcoinf(-9999.99) );
+
+  assertEqual(0, strcmp("B 9,999.990000", bitcoinf(9999.99) ) );
+  assertEqual(0, strcmp("B-9,999.990000", bitcoinf(-9999.99) ) );
 }
 
 
