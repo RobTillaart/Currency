@@ -19,5 +19,5 @@
   "license": "MIT",
   "frameworks": "arduino",
   "platforms": "*",
-  "headers": "Currency.h"
+  "headers": "currency.h"
 }
