@@ -85,7 +85,7 @@ char * JPY(double value);
 char * CNY(double value);
 
 #ifdef __cplusplus
-extern "C" {
+}
 #endif
 
 //  -- END OF FILE --
