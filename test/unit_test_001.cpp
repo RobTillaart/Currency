@@ -38,7 +38,7 @@
 
 unittest_setup()
 {
-  fprintf(stderr, "CURRENCY_VERSION: %s\n", (char *) CURRENCY_VERSION);
+  fprintf(stderr, "CURRENCY_LIB_VERSION: %s\n", (char *) CURRENCY_LIB_VERSION);
 }
 
 

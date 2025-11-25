@@ -39,9 +39,29 @@ There is a relation with the printHelpers class - https://github.com/RobTillaart
 When this currency library has matured it might be merged with printHelpers.
 
 
-#### Related
+### Symbols
+
+Not all codes work on all platforms, so you need to test for your platform.
+
+|  name              |  sign  |  code        |  Notes  |
+|:-------------------|:------:|:-------------|:--------|
+|  Euro              |   €    |  Alt + 0128  |
+|  Pound             |   £    |  Alt + 0163  |
+|  Dollar            |   $    |  Alt + 36    |
+|  Yen               |   ¥    |  Alt + 0165  |
+|  Cent              |   ¢    |  Alt + 0162  |
+|  Generic Currency  |   ¤    |  Alt + 0164  |
+|  Peseta            |   ₧    |  Alt + 158   |
+|  Frank / Florin    |   ƒ    |  Alt + 159   |
+
+More see e.g. https://www.webnots.com/alt-code-shortcuts-for-currency-symbols/
+
+
+### Related
 
 - https://github.com/RobTillaart/printHelpers
+- https://www.easymarkets.com/eu/learn-centre/discover-trading/currency-acronyms-and-abbreviations/
+
 
 ## Interface
 
@@ -51,13 +71,13 @@ When this currency library has matured it might be merged with printHelpers.
 
 The following functions are implemented:
 
-### Core function
+### Core functions
 
 - **char \* currency(int32_t value, uint8_t decimals, char decimalSeparator, char thousandSeparator, char symbol);** 
 - **char \* currency64(int64_t value, uint8_t decimals, char decimalSeparator, char thousandSeparator, char symbol);**
 
 
-### int32 Wrapper functions
+### int32_t Wrapper functions
 
 - **char \* bitcoin(int32_t value)**
 - **char \* dollar(int32_t value)**
@@ -68,7 +88,7 @@ The following functions are implemented:
 - **char \* yuan(int32_t value)**
 
 
-### int64 Wrapper functions
+### int64_t Wrapper functions
 
 - **char \* bitcoin64(int64_t value)**
 - **char \* dollar64(int64_t value)**
@@ -79,11 +99,13 @@ The following functions are implemented:
 - **char \* yuan64(int64_t value)**
 
 
-### float Wrapper functions
+### float/double Wrapper functions
 
-Experimental - not tested
+Experimental, has limitations.
 
-All assumes 2 decimals except bitcoin which has 6.
+All assumes 2 decimals except bitcoin which has 6.  
+The accuracy of a float is just 7 digits. 
+On some platforms (e.g. UNO R3) float == double so it one gets rounding errors.
 
 - **char \* bitcoinf(double value)**
 - **char \* dollarf(double value)**
@@ -92,6 +114,19 @@ All assumes 2 decimals except bitcoin which has 6.
 - **char \* roublesf(double value)**
 - **char \* yenf(double value)**
 - **char \* yuanf(double value)**
+
+
+### TLA wrapper functions
+
+idem for 64 bit and double/float, same remarks as above.
+
+- **char \* BTC(int32_t value)**
+- **char \* USD(int32_t value)**
+- **char \* EUR(int32_t value)**
+- **char \* GBP(int32_t value)**
+- **char \* RUB(int32_t value)**
+- **char \* JPY(int32_t value)**
+- **char \* CNY(int32_t value)**
 
 
 ## Operation
@@ -113,19 +148,21 @@ individual digits (div / mod 10).
 
 #### Should
 
+- test double/float API more
+  - investigate problems with round(), no 64 bit version?
+  - should the double/float wrappers be removed? (limits 7 digits for float).
+- investigate need for dollar64() and dollarF() ?
+  - parameter type should be sufficient to select right function?
+
 #### Could
 
-- More wrapper functions?
-- test double parameters.
-  - should decimals be a parameter too?
-- add BTC, USD, EUR, GBP, RUB, JPY, CNY, etc. (3+1 chars)
-- https://www.easymarkets.com/eu/learn-centre/discover-trading/currency-acronyms-and-abbreviations/
+- More TLA wrapper functions
+- .h library only as codebase is rather small?
 
 #### Won't
 
 - currency conversion?
-  - intern all in ???
-
+  - intern all in pecunia?
 
 ## Support
 
