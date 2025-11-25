@@ -9,6 +9,10 @@
 #include "currency.h"
 
 
+// #ifdef __cplusplus
+// extern "C" {
+// #endif
+
 char * currency(int32_t value, int decimals, char decimalSeparator, char thousandSeparator, char symbol)
 {
   static char tmp[16];
@@ -138,5 +142,9 @@ char * RUB(double value)        { return currency64((value * 100LL), 2,  ',',  '
 char * JPY(double value)        { return currency64((value * 100LL), 2,  '.',  ',',  'Y'); }
 char * CNY(double value)        { return currency64((value * 100LL), 2,  '.',  ',',  'Y'); }
 
+
+// #ifdef __cplusplus
+// }
+// #endif
 
 //  -- END OF FILE --

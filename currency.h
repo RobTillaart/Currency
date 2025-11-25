@@ -21,6 +21,9 @@
 //  ALT-0128 = €
 //  U+20BF   = Bitcoin
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 char * currency(int32_t value, int decimals, char decimalSeparator, char thousandSeparator, char symbol);
 
@@ -81,6 +84,9 @@ char * RUB(double value);
 char * JPY(double value);
 char * CNY(double value);
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 //  -- END OF FILE --
 
