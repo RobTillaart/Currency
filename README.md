@@ -27,14 +27,18 @@ it is a smaller unit.
 
 Using integers makes addition, subtraction and multiplication of currency exact.
 
-
 Choosing int32_t as 'base' also means that there is a limit in terms
 of minimum and maximum values. When large amounts are needed one can
 use the currency64() or one of its derived formatters as this is based
 upon int64_t numbers.
 
+The 0.2.0 version added wrapper functions in the form of a TLA (Three Letter Acronym).
+The TLA's are international used acronyms for currency e.g. CNY(value) or GBP(value).
+
 There is a relation with the printHelpers class - https://github.com/RobTillaart/printHelpers
 When this currency library has matured it might be merged with printHelpers.
+
+As always feedback (or ideas for extensions) are welcome.
 
 
 ### Breaking change 0.2.0 float/double
@@ -47,7 +51,7 @@ of the API is deprecated.
 
 ### Symbols
 
-Not all codes work on all platforms, so you need to test for your platform.
+Not all symbol codes work on all platforms, so you need to test for your platform.
 
 |  name              |  sign  |  code        |  Notes  |
 |:-------------------|:------:|:-------------|:--------|
@@ -105,6 +109,28 @@ The following functions are implemented:
 - **char \* yuan64(int64_t value)**
 
 
+### int32_t TLA Wrapper functions
+
+- **char \* BTC(int32_t value)**
+- **char \* USD(int32_t value)**
+- **char \* EUR(int32_t value)**
+- **char \* GBP(int32_t value)**
+- **char \* RUB(int32_t value)**
+- **char \* JPY(int32_t value)**
+- **char \* CNY(int32_t value)**
+
+
+### int64_t TLA Wrapper functions
+
+- **char \* BTC64(int32_t value)**
+- **char \* USD64(int32_t value)**
+- **char \* EUR64(int32_t value)**
+- **char \* GBP64(int32_t value)**
+- **char \* RUB64(int32_t value)**
+- **char \* JPY64(int32_t value)**
+- **char \* CNY64(int32_t value)**
+
+
 ### Deprecated float/double Wrapper functions
 
 Deprecated, has serious limitations, therefore commented in the library.
@@ -122,30 +148,6 @@ On some platforms (e.g. UNO R3) float == double so one gets errors.
 - **char \* yuanf(double value)**
 
 
-### int32_t TLA wrapper functions
-
-- **char \* BTC(int32_t value)**
-- **char \* USD(int32_t value)**
-- **char \* EUR(int32_t value)**
-- **char \* GBP(int32_t value)**
-- **char \* RUB(int32_t value)**
-- **char \* JPY(int32_t value)**
-- **char \* CNY(int32_t value)**
-
-
-### int64_t TLA wrapper functions
-
-- **char \* BTC64(int32_t value)**
-- **char \* USD64(int32_t value)**
-- **char \* EUR64(int32_t value)**
-- **char \* GBP64(int32_t value)**
-- **char \* RUB64(int32_t value)**
-- **char \* JPY64(int32_t value)**
-- **char \* CNY64(int32_t value)**
-
-
-
-
 ## Operation
 
 See examples.
@@ -153,8 +155,9 @@ See examples.
 
 ## Performance
 
-Performance is hard to optimize. Most time is spend in splitting
-individual digits (div / mod 10).
+Performance is hard to optimize. 
+Most time is spend in splitting individual digits (div / mod 10).
+The **divmod10()** function from my fast_math library might be an option.
 
 
 ## Future
@@ -166,16 +169,18 @@ individual digits (div / mod 10).
 #### Should
 
 - investigate a better double/float API
+- investigate impact **divmod10()** for int32 and int64.
 
 #### Could
 
-- More TLA wrapper functions
-- .h library only as codebase is rather small?
+- add more TLA wrapper functions
+- consider .h library only as codebase is rather small?
 
 #### Won't
 
-- currency conversion?
-  - intern all in pecunia?
+- currency conversion
+  - ratios change daily (or faster)
+  - intern in pecunia
 
 ## Support
 
