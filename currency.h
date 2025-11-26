@@ -21,9 +21,6 @@
 //  ALT-0128 = €
 //  U+20BF   = Bitcoin
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 char * currency(int32_t value, int decimals, char decimalSeparator, char thousandSeparator, char symbol);
 
@@ -48,13 +45,16 @@ char * roubles64(int64_t value);
 char * yen64(int64_t value);
 char * yuan64(int64_t value);
 
-char * bitcoinf(double value);
-char * dollarf(double value);
-char * eurof(double value);
-char * poundf(double value);
-char * roublesf(double value);
-char * yenf(double value);
-char * yuanf(double value);
+
+//  DEPRECATED 
+//  not reliable (useful) due to limited float precision
+//  char * bitcoinf(double value);
+//  char * dollarf(double value);
+//  char * eurof(double value);
+//  char * poundf(double value);
+//  char * roublesf(double value);
+//  char * yenf(double value);
+//  char * yuanf(double value);
 
 
 //
@@ -68,25 +68,14 @@ char * RUB(int32_t value);
 char * JPY(int32_t value);
 char * CNY(int32_t value);
 
-char * BTC(int64_t value);
-char * USD(int64_t value);
-char * EUR(int64_t value);
-char * GBP(int64_t value);
-char * RUB(int64_t value);
-char * JPY(int64_t value);
-char * CNY(int64_t value);
+char * BTC64(int64_t value);
+char * USD64(int64_t value);
+char * EUR64(int64_t value);
+char * GBP64(int64_t value);
+char * RUB64(int64_t value);
+char * JPY64(int64_t value);
+char * CNY64(int64_t value);
 
-char * BTC(double value);  //  fails
-char * USD(double value);
-char * EUR(double value);
-char * GBP(double value);
-char * RUB(double value);
-char * JPY(double value);
-char * CNY(double value);
-
-#ifdef __cplusplus
-}
-#endif
 
 //  -- END OF FILE --
 

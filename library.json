@@ -1,7 +1,7 @@
 {
   "name": "currency",
   "keywords": "currency, bitcoin, dollar, euro, roubles, yen, yuan",
-  "description": "Arduino library to help formatting integers as currency e.g. $ 1.000.000,00. ",
+  "description": "Arduino library to help formatting integers as currency e.g. $ 1.234,56.",
   "authors":
   [
     {

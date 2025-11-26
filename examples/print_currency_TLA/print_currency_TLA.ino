@@ -30,11 +30,11 @@ void setup()
   Serial.println( CNY(10000000) );
   Serial.println();
 
-  Serial.println( BTC(10000000.00) );
-  Serial.println( bitcoinf(10000000.00) );
+  Serial.println( BTC(10000000) );
+  Serial.println( BTC64(10000000) );
   Serial.println();
-  Serial.println( USD(10000000.00) );
-  Serial.println( dollarf(10000000.00) );
+  Serial.println( USD(10000000) );
+  Serial.println( USD64(10000000) );
   Serial.println();
 
   Serial.println("done");

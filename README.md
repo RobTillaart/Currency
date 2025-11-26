@@ -18,25 +18,31 @@ Arduino library to help formatting integers for printing as currency.
 
 **Experimental**
 
-The currency library contains a number of functions that help to print 
+The currency library contains a number of functions that help to print
 integers as currency.
 
 The currency functions assume you do the currency math in integer units.
-For dollars and euro's this would be cents. For numbers with more decimals 
-it is a smaller unit. 
+For dollars and euro's this would be cents. For numbers with more decimals
+it is a smaller unit.
 
 Using integers makes addition, subtraction and multiplication of currency exact.
 
-The library has experimental wrappers for float/double values. 
-Not tested extensively yet.
 
-Choosing int32_t as 'base' also means that there is a limit in terms 
-of minimum and maximum values. When large amounts are needed one can 
+Choosing int32_t as 'base' also means that there is a limit in terms
+of minimum and maximum values. When large amounts are needed one can
 use the currency64() or one of its derived formatters as this is based
 upon int64_t numbers.
 
 There is a relation with the printHelpers class - https://github.com/RobTillaart/printHelpers
 When this currency library has matured it might be merged with printHelpers.
+
+
+### Breaking change 0.2.0 float/double
+
+The library 0.1.x had experimental wrappers for float/double values.
+Testing showed the limits of **float** => seven significant digits explicitly.
+As that caused the converted string to be incorrect (thus useless) this part
+of the API is deprecated.
 
 
 ### Symbols
@@ -73,8 +79,8 @@ The following functions are implemented:
 
 ### Core functions
 
-- **char \* currency(int32_t value, uint8_t decimals, char decimalSeparator, char thousandSeparator, char symbol);** 
-- **char \* currency64(int64_t value, uint8_t decimals, char decimalSeparator, char thousandSeparator, char symbol);**
+- **char \* currency(int32_t value, uint8_t decimals, char decimalSeparator, char thousandSeparator, char symbol)**
+- **char \* currency64(int64_t value, uint8_t decimals, char decimalSeparator, char thousandSeparator, char symbol)**
 
 
 ### int32_t Wrapper functions
@@ -99,13 +105,13 @@ The following functions are implemented:
 - **char \* yuan64(int64_t value)**
 
 
-### float/double Wrapper functions
+### Deprecated float/double Wrapper functions
 
-Experimental, has limitations.
+Deprecated, has serious limitations, therefore commented in the library.
 
-All assumes 2 decimals except bitcoin which has 6.  
-The accuracy of a float is just 7 digits. 
-On some platforms (e.g. UNO R3) float == double so it one gets rounding errors.
+All assumes 2 decimals except bitcoin which has 6.
+The accuracy of a float is just 7 digits.
+On some platforms (e.g. UNO R3) float == double so one gets errors.
 
 - **char \* bitcoinf(double value)**
 - **char \* dollarf(double value)**
@@ -116,9 +122,7 @@ On some platforms (e.g. UNO R3) float == double so it one gets rounding errors.
 - **char \* yuanf(double value)**
 
 
-### TLA wrapper functions
-
-idem for 64 bit and double/float, same remarks as above.
+### int32_t TLA wrapper functions
 
 - **char \* BTC(int32_t value)**
 - **char \* USD(int32_t value)**
@@ -129,6 +133,19 @@ idem for 64 bit and double/float, same remarks as above.
 - **char \* CNY(int32_t value)**
 
 
+### int64_t TLA wrapper functions
+
+- **char \* BTC64(int32_t value)**
+- **char \* USD64(int32_t value)**
+- **char \* EUR64(int32_t value)**
+- **char \* GBP64(int32_t value)**
+- **char \* RUB64(int32_t value)**
+- **char \* JPY64(int32_t value)**
+- **char \* CNY64(int32_t value)**
+
+
+
+
 ## Operation
 
 See examples.
@@ -136,7 +153,7 @@ See examples.
 
 ## Performance
 
-Performance is hard to optimize. Most time is spend in splitting 
+Performance is hard to optimize. Most time is spend in splitting
 individual digits (div / mod 10).
 
 
@@ -148,11 +165,7 @@ individual digits (div / mod 10).
 
 #### Should
 
-- test double/float API more
-  - investigate problems with round(), no 64 bit version?
-  - should the double/float wrappers be removed? (limits 7 digits for float).
-- investigate need for dollar64() and dollarF() ?
-  - parameter type should be sufficient to select right function?
+- investigate a better double/float API
 
 #### Could
 

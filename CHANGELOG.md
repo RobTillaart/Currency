@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [0.2.0] - 2025-11-25
-- fix derived functions (signs).
+- fix derived functions (symbols).
+- add "acronym"-wrappers e.g. USD(value) and USD64(value)
+- deprecated the float/double API
+- renamed CURRENCY_LIB_VERSION
 - update GitHub actions
-- rename CURRENCY_LIB_VERSION
-- add "acronym"-wrappers e.g. USD(value)
-- added limit comments for float / double API.
 - minor edits
 
 ----
