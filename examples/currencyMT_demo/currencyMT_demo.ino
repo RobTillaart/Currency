@@ -1,5 +1,5 @@
 //
-//    FILE: class_currency.ino
+//    FILE: currencyMT_demo.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: test currency class implementation
 //     URL: https://github.com/RobTillaart/currency
